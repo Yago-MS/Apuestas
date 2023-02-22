@@ -4,7 +4,10 @@
  */
 package apuestas;
 
-
+/**
+ *
+ * @author usuario
+ */
 public class Apuesta {
 
     /**
@@ -55,10 +58,23 @@ public class Apuesta {
     private int apostado;
 
     /*Contructor por defecto*/
+
+    /**
+     *
+     */
+
     public Apuesta() {
     }
 
     /*Contructor por parámetros*/
+
+    /**
+     *
+     * @param dinero_disp
+     * @param goles_local
+     * @param goles_visitante
+     */
+
     public Apuesta(int dinero_disp, int goles_local, int goles_visitante) {
         this.dinero_disp = dinero_disp;
         this.goles_local = goles_local;
@@ -67,11 +83,19 @@ public class Apuesta {
     }
     /*Método para obtener el valor del atributo dinero_disp*/
 
+    /**
+     *
+     * @return
+     */
     public int getDinero_disp() {
         return dinero_disp;
     }
     /*Método para modificar el valor del atributo dinero_disp*/
 
+    /**
+     *
+     * @param dinero_disp
+     */
     public void setDinero_disp(int dinero_disp) {
         this.dinero_disp = dinero_disp;
     }
@@ -80,6 +104,13 @@ public class Apuesta {
      * Permite elegir la cantidad a apostar, no pudiendo ser inferior a 1 ni superior a tu saldo disponible
      * Este método será probado con JUnit
      */
+
+    /**
+     *
+     * @param dinero
+     * @throws Exception
+     */
+
     public void apostar(int dinero) throws Exception {
         if (dinero <= 0) {
             throw new Exception("No se puede apostar menos de 1€");
@@ -98,6 +129,13 @@ public class Apuesta {
      * 
      */
 
+    /**
+     *
+     * @param local
+     * @param visitante
+     * @return
+     * @throws Exception
+     */
     public boolean comprobar_resultado(int local, int visitante) throws Exception {
         boolean acertado = false;
         if ((local < 0) || (visitante) < 0) {
